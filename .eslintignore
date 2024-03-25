@@ -1,0 +1,9 @@
+node_modules
+public
+assets
+.DS_Store
+dist
+dist-ssr
+*.local
+presets
+*.d.ts

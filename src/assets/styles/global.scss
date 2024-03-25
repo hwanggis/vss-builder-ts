@@ -1,0 +1,184 @@
+
+$heightTitle:60px;
+
+$colorDark:#202020;
+$colorHover:#373737;
+$colorLight:#fff;
+
+.ol-zoom {
+  display: none;
+}
+
+
+.container{
+  position: absolute;
+  left: 0;
+  top:0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+html,body{
+  @extend .container
+}
+.splitpanes{
+  height: auto;
+}
+
+.part{
+  position: relative;
+}
+
+.grp-toolbar{
+  height: $heightTitle;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.grp-content{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: $heightTitle
+}
+
+.grp-title{
+  background-color: $colorDark;
+}
+
+/*滚动条背景*/
+.thin-scroll{
+  overflow-y: auto;
+}
+.thin-scroll::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #eeeeee;
+}
+/*滚动条滑块*/
+.thin-scroll::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 5px;
+}
+/*滚动条滑块 hover*/
+.thin-scroll::-webkit-scrollbar-thumb:hover {
+  background: #7d7d7d;
+}
+
+
+.layout-space-between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grp-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $heightTitle;
+}
+.title{
+  font-size: 22px;
+  color: white;
+  margin: 20px;
+}
+
+.overflow-text{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.h-group-icons{
+  flex-shrink: 0;
+}
+.h-group-icons .el-button{
+  width: 30px;
+  height: 30px;
+  margin-left: 0px;
+}
+
+.component{
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.attr-title {
+  text-align: center;
+  padding: 10px;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 2px solid #e4e7ed;
+  font-size: 14px;
+  font-weight: 500;
+  color: #303133;
+  width: 100%;
+}
+
+.attr-item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  margin: 15px 10px 15px 10px;
+
+  .attr-item-title{
+    width: 100%;
+    text-align: left;
+  }
+  .attr-item-content{
+    margin-top: 5px;
+    width: 100%;
+
+    .el-input,
+    .el-select{
+      width: 100%;
+    }
+  }
+}
+
+.attr-item-colorpicker{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  .el-input{
+    width: 100%;
+  }
+  .el-color-picker{
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.attr-list{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  ::v-deep .el-tabs__content {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    .el-tab-pane{
+      height: 100%;
+    }
+  }
+}
+
+
